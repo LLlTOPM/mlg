@@ -5,6 +5,15 @@
 body {
     cursor: url('../pic/cursor/cursor.cur'), auto;
 }
+
+.sunglassBlock{
+    width: 100%;
+    position: fixed;
+    flex-wrap: wrap;
+    flex-flow: row;
+    display: none;
+    justify-content: space-between;
+}
 .comicTextBlock {
     width: 100%;
     position: fixed;

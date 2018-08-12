@@ -8,3 +8,33 @@
 .comicText0 { position: relative; animation-name: comicTextOpacity1; animation-duration: 2599ms; }
 
 @keyframes comicTextOpacity1 { 0% { top: 500px; left: 500px; } 100% { top: 500px; left: 500px; opacity: 0; } }
+
+
+/*.sunglassForPerson0 { position: relative; animation-name: sunglassFalling0; animation-duration: 5000ms; }*/
+
+/*@keyframes sunglassFalling0 { 0% { top: 1075px; left: 245px; opacity: 0;} 100% { top: 1300px; left: 500px; opacity: 100; } }*/
+
+.sunglassForPerson0 { position: relative; animation-name: sunglassFalling0; animation-duration: 5100ms; }
+@keyframes sunglassFalling0 {
+    0% {
+        top: 0px;
+        left: 235px;
+        opacity: 0;
+        width: 125px;   /*Standart 100px*/
+        height: 90px;   /*Standart 65px*/
+    }
+    25% {
+        top: 155px;
+        left: 235px;
+        opacity: 1;
+        width: 125px;
+        height: 90px;
+    }
+    100% {
+        top: 155px;
+        left: 235px;
+        opacity: 1;
+        width: 125px;
+        height: 90px;
+    }
+}
