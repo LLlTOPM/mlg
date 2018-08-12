@@ -1,0 +1,54 @@
+/*div {*/
+    /*border: 1px solid black; !* Параметры границы *!*/
+/*}*/
+
+body {
+    cursor: url('../pic/cursor/cursor.cur'), auto;
+}
+.comicTextBlock {
+    width: 100%;
+    position: fixed;
+    flex-wrap: wrap;
+    flex-flow: row;
+    display: none;
+    justify-content: space-between;
+}
+.fixer {
+    width: 100%;
+    height: 54px;
+}
+.mlgBlock {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-flow: row;
+    display: none;
+    justify-content: space-between;
+}
+
+.subject {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+flex-flow: row;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 20px;
+}
+
+.fullName {
+    font-family: "Sens";
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.description {
+    text-align: center;
+    padding: 20px;
+    font-family: "SansSerif";
+    font-size: 18px;
+}

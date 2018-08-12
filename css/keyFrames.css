@@ -1,0 +1,10 @@
+.mlgActive0 { position: relative; animation-name: falling17, rotate17; animation-duration: 8100ms; }
+
+@keyframes falling17 { 0% { top: 0; left: 0; } 100% { top: 1000px; left: -45px; opacity: 0; } }
+
+@keyframes rotate17 { from { transform: rotate(0deg); } to { transform: rotate(2148deg); } }
+
+
+.comicText0 { position: relative; animation-name: comicTextOpacity1; animation-duration: 2599ms; }
+
+@keyframes comicTextOpacity1 { 0% { top: 500px; left: 500px; } 100% { top: 500px; left: 500px; opacity: 0; } }

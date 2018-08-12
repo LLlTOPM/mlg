@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LLlTOPM/mlg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LLlTOPM/mlg/issues"
+  },
+  "homepage": "https://github.com/LLlTOPM/mlg#readme",
+  "dependencies": {
+    "fullpage.js": "^3.0.2"
+  }
+}
