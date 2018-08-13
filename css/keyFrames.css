@@ -5,16 +5,34 @@
 @keyframes rotate17 { from { transform: rotate(0deg); } to { transform: rotate(2148deg); } }
 
 
-.comicText0 { position: relative; animation-name: comicTextOpacity1; animation-duration: 2599ms; }
+.comicText0 { position: relative; animation-name: comicTextOpacity0; animation-duration: 2599ms; }
 
-@keyframes comicTextOpacity1 { 0% { top: 500px; left: 500px; } 100% { top: 500px; left: 500px; opacity: 0; } }
+@keyframes comicTextOpacity0 { 0% { top: 300px; left: 50px; } 100% { top: 300px; left: 50px; opacity: 0; } }
 
 
-/*.sunglassForPerson0 { position: relative; animation-name: sunglassFalling0; animation-duration: 5000ms; }*/
+.comicText1 { position: relative; animation-name: comicTextOpacity1; animation-duration: 2599ms; }
 
-/*@keyframes sunglassFalling0 { 0% { top: 1075px; left: 245px; opacity: 0;} 100% { top: 1300px; left: 500px; opacity: 100; } }*/
+@keyframes comicTextOpacity1 { 0% { top: 300px; left: 500px; } 100% { top: 300px; left: 500px; opacity: 0; } }
 
-.sunglassForPerson0 { position: relative; animation-name: sunglassFalling0; animation-duration: 5100ms; }
+
+.comicText2 { position: relative; animation-name: comicTextOpacity2; animation-duration: 2599ms; }
+
+@keyframes comicTextOpacity2 { 0% { top: 100px; left: 600px; } 100% { top: 100px; left: 600px; opacity: 0; } }
+
+
+.comicText3 { position: relative; animation-name: comicTextOpacity3; animation-duration: 2599ms; }
+
+@keyframes comicTextOpacity3 { 0% { top: 20px; left: 50px; } 100% { top: 20px; left: 50px; opacity: 0; } }
+
+
+/*--------SUNGLASS ANIMATION-------*/
+
+.sunglassForPerson0 {
+    position: relative;
+    animation-name: sunglassFalling0;
+    animation-duration: 5100ms;
+    -webkit-animation-fill-mode: forwards;
+}
 @keyframes sunglassFalling0 {
     0% {
         top: 0px;

@@ -3,7 +3,7 @@
 /*}*/
 
 body {
-    cursor: url('../pic/cursor/cursor.cur'), auto;
+    cursor: url('../pic/thingsForPage/cursor.cur'), auto;
 }
 
 .sunglassBlock{
@@ -20,11 +20,16 @@ body {
     flex-wrap: wrap;
     flex-flow: row;
     display: none;
-    justify-content: space-between;
+
 }
+.fixerComicTextBlock {
+    height: 1px;
+    width: 100%;
+}
+
 .fixer {
     width: 100%;
-    height: 54px;
+    height: 1px;
 }
 .mlgBlock {
     width: 100%;
@@ -35,29 +40,59 @@ body {
 }
 
 .subject {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-flex-flow: row;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    flex-flow: row;
+    vertical-align:center;
 }
 
 .info {
+    /*letter-spacing: 2px;*/
+    padding: 20px;
+    word-spacing: 2px;
+    width: 57%;
+    height: 57%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-flow: column;
-    padding: 20px;
 }
 
 .fullName {
-    font-family: "Sens";
+    word-spacing: 2px;
+    text-align: left;
+    font-family: Arial;
     font-weight: bold;
     font-size: 30px;
+    padding: 20px;
+
 }
 
 .description {
-    text-align: center;
-    padding: 20px;
-    font-family: "SansSerif";
+    text-align: left;
+    padding: 10px;
+    font-family: Arial;
     font-size: 18px;
+}
+
+.photo {
+    margin: 0; /* Обнуляем отступы */
+    overflow: hidden; /* Прячем всё за пределами */
+    min-width: 37%; /* Минимальная ширина */
+    width: 37%;
+    height: 37%;
+}
+
+.pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 500px;
+}
+
+.scrolling {
+    opacity: .7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
