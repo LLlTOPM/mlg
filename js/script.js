@@ -1,7 +1,7 @@
 var main = document.getElementById("fullpage"),
     timerIDforFallingMlgStaff,
     timerIDforComicText,
-    // timerIDforSunglass,
+    timerIDShowSunglass,
     countMlgStaff = 21; //count of png +1
 
 var data = {
@@ -19,7 +19,7 @@ var data = {
         },
         {
             "fullName": "Петр Петров",
-            "pic": "4.jpg",
+            "pic": "2.jpg",
             "desription": "самое жирное описание. самое жирное описание. самое жирное описание." +
             "самое жирное описание. самое жирное описание. самое жирное описание." +
             "самое жирное описание. самое жирное описание. самое жирное описание." +
@@ -65,7 +65,7 @@ var data = {
         },
         {
             "fullName": "Семен Семенович",
-            "pic": "6.jpg",
+            "pic": "1.jpg",
             "desription": "самое жирное описание. самое жирное описание. самое жирное описание." +
             "самое жирное описание. самое жирное описание. самое жирное описание." +
             "самое жирное описание. самое жирное описание. самое жирное описание." +
@@ -107,18 +107,20 @@ var data = {
                 "<div class='fixer'>"+
                     "<div class='mlgBlock' id='mlgBlockId " + i + "'></div>" +
                 "</div>" +
-                "<div class='subject'>" +
-                    "<div class='info'>" +
-                        "<div class='fullName'>" + data.persons[i].fullName + "</div>" +
-                        "<div class='description'>" + data.persons[i].desription + "</div>" +
-                    "</div>" +
-                    "<div class='photo'>" +
-                        "<div class='sunglassBlock'>" +
-                            "<img src='pic/mlgStaff/sunglass.png'>" +
+                "<div class='subjectFixer'>" +
+                    "<div class='subject'>" +
+                        "<div class='info'>" +
+                            "<div class='fullName'>" + data.persons[i].fullName + "</div>" +
+                            "<div class='description'>" + data.persons[i].desription + "</div>" +
                         "</div>" +
-                        "<img src='pic/photo/" + data.persons[i].pic + "' class='pic' id='picPerson" + i + "'>" +
+                        "<div class='photo'>" +
+                            "<div class='sunglassBlock'>" +
+                                "<img src='pic/mlgStaff/sunglass.png'>" +
+                            "</div>" +
+                            "<img src='pic/photo/" + data.persons[i].pic + "' class='pic' id='picPerson" + i + "'>" +
+                        "</div>" +
                     "</div>" +
-                "</div>" +
+                "</div>"+
             "<div class='scrolling'>" +
                 "<img class='scrollingPic' src='pic/thingsForPage/scrolling.png'>" +
             "</div>"+
@@ -162,12 +164,10 @@ function loadComicText() {
 
 
 function hideMlgBlock () {
-    console.log('hide mlgBlock');
     $('.fp-section.active').find('.mlgBlock').css("display", "none");
 }
 
 function showComicText() {
-    console.log("show comic text");
     $('.fp-section.active').find('.comicTextBlock').css("display", "flex");
     $('.fp-section.active').find('.comicTextBlock').children().eq(0).addClass('comicText0');
     $('.fp-section.active').find('.comicTextBlock').children().eq(1).addClass('comicText1');
@@ -177,7 +177,6 @@ function showComicText() {
 }
 
 function hideComicText() {
-    console.log("hide comic text");
     $('.fp-section.active').find('.comicTextBlock').css("display", "none");
 }
 
@@ -185,6 +184,11 @@ function hideComicText() {
 //     console.log("hide sunglass");
 //     $('.fp-section.active').find('.sunglassBlock').css("display", "none");
 // }
+
+function showSunglass(slideNumber) {
+    $('.fp-section.active').find('.sunglassBlock').css("display", "flex");
+    $('.fp-section.active').find('.sunglassBlock').children().addClass('sunglassForPerson'+ slideNumber);
+}
 
 function randomInteger() {
     var rand = Math.random() * countMlgStaff;
@@ -198,25 +202,20 @@ $(document).ready(function () {
         autoScrolling: true,
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         afterLoad: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
-
             var slideNumber = $('.fp-section.active').index();  // if have not only sections, has been see fucking index 1,3,5,7.
 
             $('.fp-section.active').find('.mlgBlock').css("display", "flex");
             $('.fp-section.active').find('.mlgBlock').children().addClass('mlgActive0');
 
-            $('.fp-section.active').find('.sunglassBlock').css("display", "flex");
-            $('.fp-section.active').find('.sunglassBlock').children().addClass('sunglassForPerson'+ slideNumber);
-
+            timerIDShowSunglass = setTimeout(showSunglass, 3500, slideNumber);
             timerIDforFallingMlgStaff = setTimeout(hideMlgBlock, 8000);
-            // timerIDforSunglass = setTimeout(hideSunglass,5000);
             timerIDforComicText = setInterval(showComicText, 30000);
         },
         onLeave: function (anchor, index) {
             clearTimeout(timerIDforFallingMlgStaff);
-            // clearTimeout(timerIDforSunglass);
+            clearTimeout(timerIDShowSunglass);
             clearInterval(timerIDforComicText);
 
-            // $('.fp-section.active').find('.sunglassBlock').css("display", "none");
             $('.fp-section.active').find('.mlgBlock').css("display", "none");
             $('.fp-section.active').find('.comicTextBlock').css("display", "none");
         }

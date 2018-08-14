@@ -6,8 +6,64 @@ body {
     cursor: url('../pic/thingsForPage/cursor.cur'), auto;
 }
 
+.subjectFixer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subject {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    justify-content: center;
+    width: 1200px;
+}
+
+.info {
+    padding: 20px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.fullName {
+    word-spacing: 2px;
+    text-align: left;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 20px;
+
+}
+
+.description {
+    line-height: 20px;
+    word-spacing: 2px;
+    text-align: left;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.photo {
+    padding: 20px;
+    margin: 0; /* Обнуляем отступы */
+    overflow: hidden; /* Прячем всё за пределами */
+    min-width: 20%; /* Минимальная ширина */
+    width: 250px;
+    height: 250px;
+}
+
+.pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+}
+
 .sunglassBlock{
-    width: 100%;
     position: fixed;
     flex-wrap: wrap;
     flex-flow: row;
@@ -39,56 +95,6 @@ body {
     justify-content: space-between;
 }
 
-.subject {
-    display: flex;
-    flex-wrap: wrap;
-    /*justify-content: center;*/
-    flex-flow: row;
-    vertical-align:center;
-}
-
-.info {
-    /*letter-spacing: 2px;*/
-    padding: 20px;
-    word-spacing: 2px;
-    width: 57%;
-    height: 57%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-flow: column;
-}
-
-.fullName {
-    word-spacing: 2px;
-    text-align: left;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 20px;
-
-}
-
-.description {
-    text-align: left;
-    padding: 10px;
-    font-family: Arial;
-    font-size: 18px;
-}
-
-.photo {
-    margin: 0; /* Обнуляем отступы */
-    overflow: hidden; /* Прячем всё за пределами */
-    min-width: 37%; /* Минимальная ширина */
-    width: 37%;
-    height: 37%;
-}
-
-.pic {
-    width: 100%;
-    height: 100%;
-    border-radius: 500px;
-}
 
 .scrolling {
     opacity: .7;
