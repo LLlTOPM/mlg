@@ -22,7 +22,7 @@ body {
 
 .info {
     padding: 20px;
-    width: 800px;
+    width: 900px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -54,7 +54,7 @@ body {
     overflow: hidden; /* Прячем всё за пределами */
     min-width: 20%; /* Минимальная ширина */
     width: 250px;
-    height: 250px;
+    /*height: 250px;*/
 }
 
 .pic {
